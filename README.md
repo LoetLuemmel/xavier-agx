@@ -12,3 +12,4 @@ docker/run.sh
 Dustin from Nvidia has his prebuild docker containers on [DockerHub](https://hub.docker.com/r/dustynv/jetson-inference/tags): https://hub.docker.com/r/dustynv/jetson-inference/tags
 Alternatively, you can [Build the Project ](building-repo-2.md) from source.   
 
+Dustin has more details on his [Gihub](https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md).
