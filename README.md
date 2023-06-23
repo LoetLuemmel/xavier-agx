@@ -46,3 +46,33 @@ Dustin from Nvidia has his prebuild docker containers on [DockerHub](https://hub
 Alternatively, you can [Build the Project ](building-repo-2.md) from source.   
 
 Dustin has more details on his [Gihub](https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md).
+
+# Modelle wiederherstellen
+
+```$ cd jetson-inference/data/networks/
+$ wget https://raw.githubusercontent.com/BVLC/caffe/master/models/bvlc_googlenet/deploy.prototxt -O googlenet.prototxt
+$ wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel -O bvlc_googlenet.caffemodel
+Then check “ls -ll” again - your bvlc_googlenet.caffemodel should be 53533754 bytes and googlenet.prototxt should be 35861 bytes. If sizes match, try re-running imagenet-console again.
+
+To re-download all the models, clear your build directory and re-run cmake:
+
+$ cd jetson-inference
+$ rm -r -f build
+$ mkdir build
+$ cd build
+$ cmake ../
+$ make
+$ sudo make install
+```
+
+[Dustin's Tipp komplett](https://forums.developer.nvidia.com/t/can-not-initialize-imagenet/75716)
+
+
+
+
+
+
+
+
+
+
