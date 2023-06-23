@@ -13,6 +13,9 @@ docker/run.sh
 
 ```bash
 docker/run.sh --volume /home/pit/Pictures:/jetson-inference/build/aarch64/bin/images/test
+docker/run.sh --volume /home/pit/Pictures:/jetson-inference/build/aarch64/bin/images/test --volume /home/pit/jetson-inference/build/aarch64/bin/networks:/jetson-inference/build/aarch64/bin/networks
+
+
 ```
 
 # Running the Live Camera Recognition Demo
