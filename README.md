@@ -72,6 +72,8 @@ $ sudo make install
 
 # Working with the I2C bus
 
+Output of i2c devices on bus #8
+
 ```
 pit@pit-desktop:~$ i2cdetect -y -r 8
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -84,6 +86,8 @@ pit@pit-desktop:~$ i2cdetect -y -r 8
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 70: -- -- -- -- -- -- 76 --
 ```
+
+Char value of `bus 8`, `I2C-Address 0x76` in `register 0x0d`
 
 ```
 pit@pit-desktop:~$ sudo i2cget 8 0x76 0xd0
