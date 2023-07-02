@@ -70,7 +70,29 @@ $ sudo make install
 
 [Dustin's Tipp komplett](https://forums.developer.nvidia.com/t/can-not-initialize-imagenet/75716)
 
+# Working with the I2C bus
 
+```
+pit@pit-desktop:~$ i2cdetect -y -r 8
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- 76 --
+```
+
+```
+pit@pit-desktop:~$ sudo i2cget 8 0x76 0xd0
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will read from device file /dev/i2c-8, chip address 0x76, data address
+0xd0, using read byte data.
+Continue? [Y/n] y
+0x58
+```
 
 
 
